@@ -11,4 +11,5 @@ button {
   border-radius: 50%;
   cursor: pointer;
   outline: transparent;
+  margin-bottom: 50px;
 }
