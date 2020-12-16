@@ -17,6 +17,7 @@ function setTime(time) {
 function reset(...arr) {
   return arr.map(el => (el.textContent = '00'));
 }
+let timerId;
 class CountdownTimer {
   constructor(date, obj) {
     this.date = date;
@@ -30,10 +31,9 @@ class CountdownTimer {
     this.refs.mins.textContent = x.mins;
     this.refs.secs.textContent = x.secs;
   }
-
   start() {
     this.count();
-    const timerId = setInterval(() => {
+    timerId = setInterval(() => {
       this.count();
     }, 1000);
   }
